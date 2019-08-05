@@ -7,6 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "BraintreeCore.h"
+
+//NSString * const BTAppSwitchWillSwitchNotification = @"com.braintreepayments.BTAppSwitchWillSwitchNotification";
+//NSString * const BTAppSwitchDidSwitchNotification = @"com.braintreepayments.BTAppSwitchDidSwitchNotification";
+//NSString * const BTAppSwitchWillProcessPaymentInfoNotification = @"com.braintreepayments.BTAppSwitchWillProcessPaymentInfoNotification";
+//NSString * const BTAppSwitchNotificationTargetKey = @"BTAppSwitchNotificationTargetKey";
+//NSString * const BTAppContextWillSwitchNotification = @"com.braintreepayments.BTAppContextWillSwitchNotification";
+//NSString * const BTAppContextDidReturnNotification = @"com.braintreepayments.BTAppContextDidReturnNotification";
+
 
 @interface AppDelegate ()
 
@@ -14,12 +23,20 @@
 
 @implementation AppDelegate
 
+NSString *BraintreeDemoAppDelegatePaymentsURLScheme = @"com.braintreepayments.Demo.payments";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [BTAppSwitch setReturnURLScheme:BraintreeDemoAppDelegatePaymentsURLScheme];
+
     return YES;
 }
 
+
++ (void)setReturnURLScheme:(NSString *)returnURLScheme {
+    [BTAppSwitch sharedInstance].returnURLScheme = returnURLScheme;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

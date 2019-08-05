@@ -44,6 +44,9 @@
                                 <state key="normal" title="Card.IO">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="presentCardIO" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hcw-NU-qwD"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="4111111111111111" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-IS-Rgg">
                                 <rect key="frame" x="90" y="139" width="304" height="30"/>
@@ -113,6 +116,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="autofillButton" destination="3o2-gL-rnZ" id="Fy9-HR-50c"/>
+                        <outlet property="cardIOButton" destination="Ynh-KF-OUh" id="PJh-7y-CwB"/>
+                        <outlet property="cardNumberField" destination="MEu-IS-Rgg" id="h1j-dR-SSi"/>
+                        <outlet property="expirationMonthField" destination="BlB-Lh-1Oa" id="GFV-gL-7H2"/>
+                        <outlet property="expirationYearField" destination="sQI-ei-c4R" id="5t6-SM-tyl"/>
+                        <outlet property="submitButton" destination="w8p-Fq-r0A" id="k4T-Qc-ZgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

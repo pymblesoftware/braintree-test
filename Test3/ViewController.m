@@ -35,9 +35,16 @@
     return self;
 }
 
+- (instancetype) init {
+    return [self initWithAuthorization:@"development_tokenization_key"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+//    _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"development_tokenization_key"];
+//    _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"sandbox_tokenization_key"];
+    _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"sandbox_9dbg82cq_dcpspy2brwdjr3qn"];
     self.title = NSLocalizedString(@"Card Tokenization", nil);
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 
@@ -65,7 +72,7 @@
 }
 
 - (IBAction)submitForm {
-    self.progressBlock(@"Tokenizing card details!");
+//    self.progressBlock(@"Tokenizing card details!");
 
     BTCardClient *cardClient = [[BTCardClient alloc] initWithAPIClient:self.apiClient];
     BTCard *card = [[BTCard alloc] initWithNumber:self.cardNumberField.text
@@ -73,15 +80,16 @@
                                    expirationYear:self.expirationYearField.text
                                               cvv:nil];
 
-    [self setFieldsEnabled:NO];
+//    [self setFieldsEnabled:NO];
     [cardClient tokenizeCard:card completion:^(BTCardNonce *tokenized, NSError *error) {
         [self setFieldsEnabled:YES];
         if (error) {
-            self.progressBlock(error.localizedDescription);
+//            self.progressBlock(error.localizedDescription);
             NSLog(@"Error: %@", error);
+            NSLog( @"Nonce: %@", tokenized.nonce );
             return;
         }
-//        self.completionBlock(tokenized);
+        self.completionBlock(tokenized);
     }];
 }
 
