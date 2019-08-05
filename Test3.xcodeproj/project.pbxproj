@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126D711176842D8DDA80F878 /* Pods_Test3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F4FAE4DA75CB385FBBBC34 /* Pods_Test3Tests.framework */; };
 		59274ADB22F7C14900C259BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274ADA22F7C14900C259BE /* AppDelegate.m */; };
 		59274ADE22F7C14900C259BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274ADD22F7C14900C259BE /* ViewController.m */; };
 		59274AE122F7C14900C259BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59274ADF22F7C14900C259BE /* Main.storyboard */; };
@@ -16,6 +17,37 @@
 		59274AEC22F7C14A00C259BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274AEB22F7C14A00C259BE /* main.m */; };
 		59274AF622F7C14A00C259BE /* Test3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274AF522F7C14A00C259BE /* Test3Tests.m */; };
 		59274B0122F7C14B00C259BE /* Test3UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B0022F7C14B00C259BE /* Test3UITests.m */; };
+		59274B8F22F7D92A00C259BE /* BTErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B5F22F7D92A00C259BE /* BTErrors.m */; };
+		59274B9022F7D92A00C259BE /* BTAnalyticsMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6022F7D92A00C259BE /* BTAnalyticsMetadata.m */; };
+		59274B9122F7D92A00C259BE /* BTClientToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6122F7D92A00C259BE /* BTClientToken.m */; };
+		59274B9222F7D92A00C259BE /* BTJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6322F7D92A00C259BE /* BTJSON.m */; };
+		59274B9322F7D92A00C259BE /* BTBinData.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6422F7D92A00C259BE /* BTBinData.m */; };
+		59274B9422F7D92A00C259BE /* BTURLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6622F7D92A00C259BE /* BTURLUtils.m */; };
+		59274B9522F7D92A00C259BE /* BTAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6722F7D92A00C259BE /* BTAPIClient.m */; };
+		59274B9622F7D92A00C259BE /* BTAnalyticsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6822F7D92A00C259BE /* BTAnalyticsService.m */; };
+		59274B9722F7D92A00C259BE /* BTPaymentMethodNonceParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6922F7D92A00C259BE /* BTPaymentMethodNonceParser.m */; };
+		59274B9822F7D92A00C259BE /* BTAppSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6A22F7D92A00C259BE /* BTAppSwitch.m */; };
+		59274B9922F7D92A00C259BE /* BTPaymentMethodNonce.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6B22F7D92A00C259BE /* BTPaymentMethodNonce.m */; };
+		59274B9A22F7D92A00C259BE /* BTTokenizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6C22F7D92A00C259BE /* BTTokenizationService.m */; };
+		59274B9B22F7D92A00C259BE /* BTHTTPErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6D22F7D92A00C259BE /* BTHTTPErrors.m */; };
+		59274B9C22F7D92A00C259BE /* BTHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6E22F7D92A00C259BE /* BTHTTP.m */; };
+		59274B9D22F7D92A00C259BE /* BTAPIHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B6F22F7D92A00C259BE /* BTAPIHTTP.m */; };
+		59274B9E22F7D92A00C259BE /* BTPostalAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B7022F7D92A00C259BE /* BTPostalAddress.m */; };
+		59274B9F22F7D92A00C259BE /* BTLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B8322F7D92A00C259BE /* BTLogger.m */; };
+		59274BA022F7D92A00C259BE /* BTKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B8422F7D92A00C259BE /* BTKeychain.m */; };
+		59274BA122F7D92A00C259BE /* BTAPIPinnedCertificates.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B8522F7D92A00C259BE /* BTAPIPinnedCertificates.m */; };
+		59274BA222F7D92A00C259BE /* BTGraphQLHTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B8822F7D92A00C259BE /* BTGraphQLHTTP.m */; };
+		59274BA322F7D92A00C259BE /* BTClientMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B8922F7D92A00C259BE /* BTClientMetadata.m */; };
+		59274BA422F7D92A00C259BE /* Info-orig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59274B8A22F7D92A00C259BE /* Info-orig.plist */; };
+		59274BA522F7D92A00C259BE /* BTConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274B8E22F7D92A00C259BE /* BTConfiguration.m */; };
+		59274BB822F7D94D00C259BE /* BTConfiguration+Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BA722F7D94D00C259BE /* BTConfiguration+Card.m */; };
+		59274BB922F7D94D00C259BE /* BTCardNonce.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BA822F7D94D00C259BE /* BTCardNonce.m */; };
+		59274BBA22F7D94D00C259BE /* BTCardRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAC22F7D94D00C259BE /* BTCardRequest.m */; };
+		59274BBB22F7D94D00C259BE /* BTCardClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAD22F7D94D00C259BE /* BTCardClient.m */; };
+		59274BBC22F7D94D00C259BE /* BTCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAE22F7D94D00C259BE /* BTCard.m */; };
+		59274BBD22F7D94D00C259BE /* BTThreeDSecureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */; };
+		6BBC1247B708440387C30E76 /* Pods_Test3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4FE6CAAD1DD8FCD6891805 /* Pods_Test3UITests.framework */; };
+		E572D24E8F10108E42D03F67 /* Pods_Test3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		057E86F8C9B7ADD525659640 /* Pods-Test3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3Tests.debug.xcconfig"; path = "Target Support Files/Pods-Test3Tests/Pods-Test3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D6998733A28D304A558B59E /* Pods-Test3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3UITests.release.xcconfig"; path = "Target Support Files/Pods-Test3UITests/Pods-Test3UITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DEB40CF2B94E0124B1CDFDD /* Pods-Test3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3.release.xcconfig"; path = "Target Support Files/Pods-Test3/Pods-Test3.release.xcconfig"; sourceTree = "<group>"; };
 		59274AD622F7C14900C259BE /* Test3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59274AD922F7C14900C259BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59274ADA22F7C14900C259BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +88,79 @@
 		59274AFC22F7C14B00C259BE /* Test3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59274B0022F7C14B00C259BE /* Test3UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test3UITests.m; sourceTree = "<group>"; };
 		59274B0222F7C14B00C259BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59274B5B22F7D92A00C259BE /* BTKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTKeychain.h; sourceTree = "<group>"; };
+		59274B5C22F7D92A00C259BE /* BTAPIHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAPIHTTP.h; sourceTree = "<group>"; };
+		59274B5D22F7D92A00C259BE /* BTHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTHTTP.h; sourceTree = "<group>"; };
+		59274B5E22F7D92A00C259BE /* BTLogger_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLogger_Internal.h; sourceTree = "<group>"; };
+		59274B5F22F7D92A00C259BE /* BTErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTErrors.m; sourceTree = "<group>"; };
+		59274B6022F7D92A00C259BE /* BTAnalyticsMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAnalyticsMetadata.m; sourceTree = "<group>"; };
+		59274B6122F7D92A00C259BE /* BTClientToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTClientToken.m; sourceTree = "<group>"; };
+		59274B6222F7D92A00C259BE /* BTAPIPinnedCertificates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAPIPinnedCertificates.h; sourceTree = "<group>"; };
+		59274B6322F7D92A00C259BE /* BTJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTJSON.m; sourceTree = "<group>"; };
+		59274B6422F7D92A00C259BE /* BTBinData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTBinData.m; sourceTree = "<group>"; };
+		59274B6522F7D92A00C259BE /* BTGraphQLHTTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGraphQLHTTP.h; sourceTree = "<group>"; };
+		59274B6622F7D92A00C259BE /* BTURLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTURLUtils.m; sourceTree = "<group>"; };
+		59274B6722F7D92A00C259BE /* BTAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAPIClient.m; sourceTree = "<group>"; };
+		59274B6822F7D92A00C259BE /* BTAnalyticsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAnalyticsService.m; sourceTree = "<group>"; };
+		59274B6922F7D92A00C259BE /* BTPaymentMethodNonceParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPaymentMethodNonceParser.m; sourceTree = "<group>"; };
+		59274B6A22F7D92A00C259BE /* BTAppSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAppSwitch.m; sourceTree = "<group>"; };
+		59274B6B22F7D92A00C259BE /* BTPaymentMethodNonce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPaymentMethodNonce.m; sourceTree = "<group>"; };
+		59274B6C22F7D92A00C259BE /* BTTokenizationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTTokenizationService.m; sourceTree = "<group>"; };
+		59274B6D22F7D92A00C259BE /* BTHTTPErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHTTPErrors.m; sourceTree = "<group>"; };
+		59274B6E22F7D92A00C259BE /* BTHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTHTTP.m; sourceTree = "<group>"; };
+		59274B6F22F7D92A00C259BE /* BTAPIHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAPIHTTP.m; sourceTree = "<group>"; };
+		59274B7022F7D92A00C259BE /* BTPostalAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTPostalAddress.m; sourceTree = "<group>"; };
+		59274B7222F7D92A00C259BE /* BTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTLogger.h; sourceTree = "<group>"; };
+		59274B7322F7D92A00C259BE /* BTPostalAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPostalAddress.h; sourceTree = "<group>"; };
+		59274B7422F7D92A00C259BE /* BraintreeCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeCore.h; sourceTree = "<group>"; };
+		59274B7522F7D92A00C259BE /* BTClientMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTClientMetadata.h; sourceTree = "<group>"; };
+		59274B7622F7D92A00C259BE /* BTConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTConfiguration.h; sourceTree = "<group>"; };
+		59274B7722F7D92A00C259BE /* BTEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTEnums.h; sourceTree = "<group>"; };
+		59274B7822F7D92A00C259BE /* BTViewControllerPresentingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTViewControllerPresentingDelegate.h; sourceTree = "<group>"; };
+		59274B7922F7D92A00C259BE /* BTJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTJSON.h; sourceTree = "<group>"; };
+		59274B7A22F7D92A00C259BE /* BTClientToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTClientToken.h; sourceTree = "<group>"; };
+		59274B7B22F7D92A00C259BE /* BTErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTErrors.h; sourceTree = "<group>"; };
+		59274B7C22F7D92A00C259BE /* BTAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAPIClient.h; sourceTree = "<group>"; };
+		59274B7D22F7D92A00C259BE /* BTBinData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTBinData.h; sourceTree = "<group>"; };
+		59274B7E22F7D92A00C259BE /* BTHTTPErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTHTTPErrors.h; sourceTree = "<group>"; };
+		59274B7F22F7D92A00C259BE /* BTTokenizationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTTokenizationService.h; sourceTree = "<group>"; };
+		59274B8022F7D92A00C259BE /* BTPaymentMethodNonce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPaymentMethodNonce.h; sourceTree = "<group>"; };
+		59274B8122F7D92A00C259BE /* BTAppSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAppSwitch.h; sourceTree = "<group>"; };
+		59274B8222F7D92A00C259BE /* BTPaymentMethodNonceParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTPaymentMethodNonceParser.h; sourceTree = "<group>"; };
+		59274B8322F7D92A00C259BE /* BTLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTLogger.m; sourceTree = "<group>"; };
+		59274B8422F7D92A00C259BE /* BTKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTKeychain.m; sourceTree = "<group>"; };
+		59274B8522F7D92A00C259BE /* BTAPIPinnedCertificates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTAPIPinnedCertificates.m; sourceTree = "<group>"; };
+		59274B8622F7D92A00C259BE /* BTAnalyticsMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAnalyticsMetadata.h; sourceTree = "<group>"; };
+		59274B8722F7D92A00C259BE /* BTURLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTURLUtils.h; sourceTree = "<group>"; };
+		59274B8822F7D92A00C259BE /* BTGraphQLHTTP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGraphQLHTTP.m; sourceTree = "<group>"; };
+		59274B8922F7D92A00C259BE /* BTClientMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTClientMetadata.m; sourceTree = "<group>"; };
+		59274B8A22F7D92A00C259BE /* Info-orig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-orig.plist"; sourceTree = "<group>"; };
+		59274B8B22F7D92A00C259BE /* BTAnalyticsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAnalyticsService.h; sourceTree = "<group>"; };
+		59274B8C22F7D92A00C259BE /* Braintree-Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Braintree-Version.h"; sourceTree = "<group>"; };
+		59274B8D22F7D92A00C259BE /* BTAPIClient_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTAPIClient_Internal.h; sourceTree = "<group>"; };
+		59274B8E22F7D92A00C259BE /* BTConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTConfiguration.m; sourceTree = "<group>"; };
+		59274BA722F7D94D00C259BE /* BTConfiguration+Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BTConfiguration+Card.m"; sourceTree = "<group>"; };
+		59274BA822F7D94D00C259BE /* BTCardNonce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCardNonce.m; sourceTree = "<group>"; };
+		59274BA922F7D94D00C259BE /* BTCard_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCard_Internal.h; sourceTree = "<group>"; };
+		59274BAA22F7D94D00C259BE /* BTConfiguration+Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BTConfiguration+Card.h"; sourceTree = "<group>"; };
+		59274BAB22F7D94D00C259BE /* BTCardNonce_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardNonce_Internal.h; sourceTree = "<group>"; };
+		59274BAC22F7D94D00C259BE /* BTCardRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCardRequest.m; sourceTree = "<group>"; };
+		59274BAD22F7D94D00C259BE /* BTCardClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCardClient.m; sourceTree = "<group>"; };
+		59274BAE22F7D94D00C259BE /* BTCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTCard.m; sourceTree = "<group>"; };
+		59274BB022F7D94D00C259BE /* BTCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCard.h; sourceTree = "<group>"; };
+		59274BB122F7D94D00C259BE /* BTCardClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardClient.h; sourceTree = "<group>"; };
+		59274BB222F7D94D00C259BE /* BTCardRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardRequest.h; sourceTree = "<group>"; };
+		59274BB322F7D94D00C259BE /* BTThreeDSecureInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTThreeDSecureInfo.h; sourceTree = "<group>"; };
+		59274BB422F7D94D00C259BE /* BraintreeCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeCard.h; sourceTree = "<group>"; };
+		59274BB522F7D94D00C259BE /* BTCardNonce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardNonce.h; sourceTree = "<group>"; };
+		59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTThreeDSecureInfo.m; sourceTree = "<group>"; };
+		59274BB722F7D94D00C259BE /* BTCardClient_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardClient_Internal.h; sourceTree = "<group>"; };
+		59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F4FAE4DA75CB385FBBBC34 /* Pods_Test3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B8C1EC5DB6463698A562A7E /* Pods-Test3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3.debug.xcconfig"; path = "Target Support Files/Pods-Test3/Pods-Test3.debug.xcconfig"; sourceTree = "<group>"; };
+		B1770FA41B4A6941EA8217E3 /* Pods-Test3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3UITests.debug.xcconfig"; path = "Target Support Files/Pods-Test3UITests/Pods-Test3UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4FE6CAAD1DD8FCD6891805 /* Pods_Test3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF01A3CF1A41B98BC9595BAE /* Pods-Test3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3Tests.release.xcconfig"; path = "Target Support Files/Pods-Test3Tests/Pods-Test3Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E572D24E8F10108E42D03F67 /* Pods_Test3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				126D711176842D8DDA80F878 /* Pods_Test3Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +184,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBC1247B708440387C30E76 /* Pods_Test3UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36CE27B5A87349D2682A6FFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */,
+				90F4FAE4DA75CB385FBBBC34 /* Pods_Test3Tests.framework */,
+				DC4FE6CAAD1DD8FCD6891805 /* Pods_Test3UITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		59274ACD22F7C14900C259BE = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +208,8 @@
 				59274AF422F7C14A00C259BE /* Test3Tests */,
 				59274AFF22F7C14B00C259BE /* Test3UITests */,
 				59274AD722F7C14900C259BE /* Products */,
+				7F7CDCDB228919BB501B8A9E /* Pods */,
+				36CE27B5A87349D2682A6FFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +226,7 @@
 		59274AD822F7C14900C259BE /* Test3 */ = {
 			isa = PBXGroup;
 			children = (
+				59274B5A22F7D92A00C259BE /* BraintreeCore */,
 				59274AD922F7C14900C259BE /* AppDelegate.h */,
 				59274ADA22F7C14900C259BE /* AppDelegate.m */,
 				59274ADC22F7C14900C259BE /* ViewController.h */,
@@ -135,6 +259,119 @@
 			path = Test3UITests;
 			sourceTree = "<group>";
 		};
+		59274B5A22F7D92A00C259BE /* BraintreeCore */ = {
+			isa = PBXGroup;
+			children = (
+				59274BA622F7D94D00C259BE /* BraintreeCard */,
+				59274B5B22F7D92A00C259BE /* BTKeychain.h */,
+				59274B5C22F7D92A00C259BE /* BTAPIHTTP.h */,
+				59274B5D22F7D92A00C259BE /* BTHTTP.h */,
+				59274B5E22F7D92A00C259BE /* BTLogger_Internal.h */,
+				59274B5F22F7D92A00C259BE /* BTErrors.m */,
+				59274B6022F7D92A00C259BE /* BTAnalyticsMetadata.m */,
+				59274B6122F7D92A00C259BE /* BTClientToken.m */,
+				59274B6222F7D92A00C259BE /* BTAPIPinnedCertificates.h */,
+				59274B6322F7D92A00C259BE /* BTJSON.m */,
+				59274B6422F7D92A00C259BE /* BTBinData.m */,
+				59274B6522F7D92A00C259BE /* BTGraphQLHTTP.h */,
+				59274B6622F7D92A00C259BE /* BTURLUtils.m */,
+				59274B6722F7D92A00C259BE /* BTAPIClient.m */,
+				59274B6822F7D92A00C259BE /* BTAnalyticsService.m */,
+				59274B6922F7D92A00C259BE /* BTPaymentMethodNonceParser.m */,
+				59274B6A22F7D92A00C259BE /* BTAppSwitch.m */,
+				59274B6B22F7D92A00C259BE /* BTPaymentMethodNonce.m */,
+				59274B6C22F7D92A00C259BE /* BTTokenizationService.m */,
+				59274B6D22F7D92A00C259BE /* BTHTTPErrors.m */,
+				59274B6E22F7D92A00C259BE /* BTHTTP.m */,
+				59274B6F22F7D92A00C259BE /* BTAPIHTTP.m */,
+				59274B7022F7D92A00C259BE /* BTPostalAddress.m */,
+				59274B7122F7D92A00C259BE /* Public */,
+				59274B8322F7D92A00C259BE /* BTLogger.m */,
+				59274B8422F7D92A00C259BE /* BTKeychain.m */,
+				59274B8522F7D92A00C259BE /* BTAPIPinnedCertificates.m */,
+				59274B8622F7D92A00C259BE /* BTAnalyticsMetadata.h */,
+				59274B8722F7D92A00C259BE /* BTURLUtils.h */,
+				59274B8822F7D92A00C259BE /* BTGraphQLHTTP.m */,
+				59274B8922F7D92A00C259BE /* BTClientMetadata.m */,
+				59274B8A22F7D92A00C259BE /* Info-orig.plist */,
+				59274B8B22F7D92A00C259BE /* BTAnalyticsService.h */,
+				59274B8C22F7D92A00C259BE /* Braintree-Version.h */,
+				59274B8D22F7D92A00C259BE /* BTAPIClient_Internal.h */,
+				59274B8E22F7D92A00C259BE /* BTConfiguration.m */,
+			);
+			name = BraintreeCore;
+			path = ../../Test4/BraintreeCore;
+			sourceTree = "<group>";
+		};
+		59274B7122F7D92A00C259BE /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				59274B7222F7D92A00C259BE /* BTLogger.h */,
+				59274B7322F7D92A00C259BE /* BTPostalAddress.h */,
+				59274B7422F7D92A00C259BE /* BraintreeCore.h */,
+				59274B7522F7D92A00C259BE /* BTClientMetadata.h */,
+				59274B7622F7D92A00C259BE /* BTConfiguration.h */,
+				59274B7722F7D92A00C259BE /* BTEnums.h */,
+				59274B7822F7D92A00C259BE /* BTViewControllerPresentingDelegate.h */,
+				59274B7922F7D92A00C259BE /* BTJSON.h */,
+				59274B7A22F7D92A00C259BE /* BTClientToken.h */,
+				59274B7B22F7D92A00C259BE /* BTErrors.h */,
+				59274B7C22F7D92A00C259BE /* BTAPIClient.h */,
+				59274B7D22F7D92A00C259BE /* BTBinData.h */,
+				59274B7E22F7D92A00C259BE /* BTHTTPErrors.h */,
+				59274B7F22F7D92A00C259BE /* BTTokenizationService.h */,
+				59274B8022F7D92A00C259BE /* BTPaymentMethodNonce.h */,
+				59274B8122F7D92A00C259BE /* BTAppSwitch.h */,
+				59274B8222F7D92A00C259BE /* BTPaymentMethodNonceParser.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		59274BA622F7D94D00C259BE /* BraintreeCard */ = {
+			isa = PBXGroup;
+			children = (
+				59274BA722F7D94D00C259BE /* BTConfiguration+Card.m */,
+				59274BA822F7D94D00C259BE /* BTCardNonce.m */,
+				59274BA922F7D94D00C259BE /* BTCard_Internal.h */,
+				59274BAA22F7D94D00C259BE /* BTConfiguration+Card.h */,
+				59274BAB22F7D94D00C259BE /* BTCardNonce_Internal.h */,
+				59274BAC22F7D94D00C259BE /* BTCardRequest.m */,
+				59274BAD22F7D94D00C259BE /* BTCardClient.m */,
+				59274BAE22F7D94D00C259BE /* BTCard.m */,
+				59274BAF22F7D94D00C259BE /* Public */,
+				59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */,
+				59274BB722F7D94D00C259BE /* BTCardClient_Internal.h */,
+			);
+			name = BraintreeCard;
+			path = ../BraintreeCard;
+			sourceTree = "<group>";
+		};
+		59274BAF22F7D94D00C259BE /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				59274BB022F7D94D00C259BE /* BTCard.h */,
+				59274BB122F7D94D00C259BE /* BTCardClient.h */,
+				59274BB222F7D94D00C259BE /* BTCardRequest.h */,
+				59274BB322F7D94D00C259BE /* BTThreeDSecureInfo.h */,
+				59274BB422F7D94D00C259BE /* BraintreeCard.h */,
+				59274BB522F7D94D00C259BE /* BTCardNonce.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		7F7CDCDB228919BB501B8A9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B8C1EC5DB6463698A562A7E /* Pods-Test3.debug.xcconfig */,
+				4DEB40CF2B94E0124B1CDFDD /* Pods-Test3.release.xcconfig */,
+				057E86F8C9B7ADD525659640 /* Pods-Test3Tests.debug.xcconfig */,
+				EF01A3CF1A41B98BC9595BAE /* Pods-Test3Tests.release.xcconfig */,
+				B1770FA41B4A6941EA8217E3 /* Pods-Test3UITests.debug.xcconfig */,
+				1D6998733A28D304A558B59E /* Pods-Test3UITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,6 +379,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59274B0522F7C14B00C259BE /* Build configuration list for PBXNativeTarget "Test3" */;
 			buildPhases = (
+				09A21648455F87EFCB3AE66B /* [CP] Check Pods Manifest.lock */,
 				59274AD222F7C14900C259BE /* Sources */,
 				59274AD322F7C14900C259BE /* Frameworks */,
 				59274AD422F7C14900C259BE /* Resources */,
@@ -159,6 +397,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59274B0822F7C14B00C259BE /* Build configuration list for PBXNativeTarget "Test3Tests" */;
 			buildPhases = (
+				73F6B25B2584B82E2EC1F4FF /* [CP] Check Pods Manifest.lock */,
 				59274AED22F7C14A00C259BE /* Sources */,
 				59274AEE22F7C14A00C259BE /* Frameworks */,
 				59274AEF22F7C14A00C259BE /* Resources */,
@@ -177,6 +416,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59274B0B22F7C14B00C259BE /* Build configuration list for PBXNativeTarget "Test3UITests" */;
 			buildPhases = (
+				684B4E54CF6141E2F5012A85 /* [CP] Check Pods Manifest.lock */,
 				59274AF822F7C14B00C259BE /* Sources */,
 				59274AF922F7C14B00C259BE /* Frameworks */,
 				59274AFA22F7C14B00C259BE /* Resources */,
@@ -240,6 +480,7 @@
 			files = (
 				59274AE922F7C14A00C259BE /* LaunchScreen.storyboard in Resources */,
 				59274AE622F7C14A00C259BE /* Assets.xcassets in Resources */,
+				59274BA422F7D92A00C259BE /* Info-orig.plist in Resources */,
 				59274AE122F7C14900C259BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,15 +501,112 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09A21648455F87EFCB3AE66B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test3-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		684B4E54CF6141E2F5012A85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test3UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73F6B25B2584B82E2EC1F4FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Test3Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		59274AD222F7C14900C259BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59274B9D22F7D92A00C259BE /* BTAPIHTTP.m in Sources */,
+				59274B9822F7D92A00C259BE /* BTAppSwitch.m in Sources */,
+				59274BB822F7D94D00C259BE /* BTConfiguration+Card.m in Sources */,
+				59274B9422F7D92A00C259BE /* BTURLUtils.m in Sources */,
+				59274B9622F7D92A00C259BE /* BTAnalyticsService.m in Sources */,
 				59274AE422F7C14900C259BE /* Test3.xcdatamodeld in Sources */,
+				59274B9922F7D92A00C259BE /* BTPaymentMethodNonce.m in Sources */,
+				59274B9122F7D92A00C259BE /* BTClientToken.m in Sources */,
 				59274ADE22F7C14900C259BE /* ViewController.m in Sources */,
+				59274BBA22F7D94D00C259BE /* BTCardRequest.m in Sources */,
+				59274B9F22F7D92A00C259BE /* BTLogger.m in Sources */,
+				59274B9222F7D92A00C259BE /* BTJSON.m in Sources */,
+				59274B8F22F7D92A00C259BE /* BTErrors.m in Sources */,
+				59274BA222F7D92A00C259BE /* BTGraphQLHTTP.m in Sources */,
+				59274B9722F7D92A00C259BE /* BTPaymentMethodNonceParser.m in Sources */,
+				59274BA122F7D92A00C259BE /* BTAPIPinnedCertificates.m in Sources */,
+				59274B9C22F7D92A00C259BE /* BTHTTP.m in Sources */,
 				59274AEC22F7C14A00C259BE /* main.m in Sources */,
+				59274B9522F7D92A00C259BE /* BTAPIClient.m in Sources */,
+				59274B9022F7D92A00C259BE /* BTAnalyticsMetadata.m in Sources */,
+				59274BBD22F7D94D00C259BE /* BTThreeDSecureInfo.m in Sources */,
+				59274BBC22F7D94D00C259BE /* BTCard.m in Sources */,
+				59274BB922F7D94D00C259BE /* BTCardNonce.m in Sources */,
+				59274B9322F7D92A00C259BE /* BTBinData.m in Sources */,
+				59274B9B22F7D92A00C259BE /* BTHTTPErrors.m in Sources */,
+				59274BA322F7D92A00C259BE /* BTClientMetadata.m in Sources */,
+				59274B9A22F7D92A00C259BE /* BTTokenizationService.m in Sources */,
+				59274BA522F7D92A00C259BE /* BTConfiguration.m in Sources */,
+				59274BBB22F7D94D00C259BE /* BTCardClient.m in Sources */,
 				59274ADB22F7C14900C259BE /* AppDelegate.m in Sources */,
+				59274BA022F7D92A00C259BE /* BTKeychain.m in Sources */,
+				59274B9E22F7D92A00C259BE /* BTPostalAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +775,7 @@
 		};
 		59274B0622F7C14B00C259BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B8C1EC5DB6463698A562A7E /* Pods-Test3.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +793,7 @@
 		};
 		59274B0722F7C14B00C259BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DEB40CF2B94E0124B1CDFDD /* Pods-Test3.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +811,7 @@
 		};
 		59274B0922F7C14B00C259BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 057E86F8C9B7ADD525659640 /* Pods-Test3Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +831,7 @@
 		};
 		59274B0A22F7C14B00C259BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF01A3CF1A41B98BC9595BAE /* Pods-Test3Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -509,6 +851,7 @@
 		};
 		59274B0C22F7C14B00C259BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1770FA41B4A6941EA8217E3 /* Pods-Test3UITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HUBV63PDP4;
@@ -527,6 +870,7 @@
 		};
 		59274B0D22F7C14B00C259BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D6998733A28D304A558B59E /* Pods-Test3UITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HUBV63PDP4;
