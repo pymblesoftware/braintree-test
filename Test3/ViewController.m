@@ -11,6 +11,8 @@
 #import <CardIO/CardIO.h>
 #import "BTCardClient.h"
 
+#import "BraintreeDemoMerchantAPI.h"
+
 @interface ViewController ()<CardIOPaymentViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *cardNumberField;
@@ -22,6 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (nonatomic, strong) BTAPIClient *apiClient;
 
+@property (weak, nonatomic) BTCardNonce *latestTokenizedPayment;
 @end
 
 @implementation ViewController
@@ -87,10 +90,40 @@
 //            self.progressBlock(error.localizedDescription);
             NSLog(@"Error: %@", error);
             NSLog( @"Nonce: %@", tokenized.nonce );
+            
+            self.latestTokenizedPayment = tokenized;
             return;
         }
-        self.completionBlock(tokenized);
+        // self.completionBlock(tokenized);
     }];
+}
+
+- (IBAction)onMakePakymentTouched:(id)sender {
+    
+    [self doTransaction];
+    
+}
+
+
+
+-(void) doTransaction {
+    
+    NSString *nonce = self.latestTokenizedPayment.nonce;
+
+    [[BraintreeDemoMerchantAPI sharedService] makeTransactionWithPaymentMethodNonce:nonce
+                                                                         completion:^(NSString *transactionId, NSError *error){
+                                                                             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
+                                                                             self.latestTokenizedPayment = nil;
+                                                                             if (error) {
+                                                                                 NSLog(@"error: %@", error.localizedDescription );
+//                                                                                 [self updateStatus:error.localizedDescription];
+                                                                             } else {
+                                                                                 NSLog( @"Transaction : %@", transactionId  );
+//                                                                                 [self updateStatus:transactionId];
+                                                                             }
+                                                                         }];
+    
+    
 }
 
 - (IBAction)setupDemoData {

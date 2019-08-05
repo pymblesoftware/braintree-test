@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,15 @@
 		59274BBB22F7D94D00C259BE /* BTCardClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAD22F7D94D00C259BE /* BTCardClient.m */; };
 		59274BBC22F7D94D00C259BE /* BTCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAE22F7D94D00C259BE /* BTCard.m */; };
 		59274BBD22F7D94D00C259BE /* BTThreeDSecureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */; };
+		59274BC122F7F48200C259BE /* BraintreeDemoMerchantAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BBF22F7F48200C259BE /* BraintreeDemoMerchantAPI.m */; };
+		59274BD322F7F7E800C259BE /* BraintreeDemoSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BC422F7F7E800C259BE /* BraintreeDemoSettings.m */; };
+		59274BD422F7F7E800C259BE /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 59274BC522F7F7E800C259BE /* Settings.bundle */; };
+		59274BD522F7F7E800C259BE /* BraintreeDemoIntegrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BC722F7F7E800C259BE /* BraintreeDemoIntegrationViewController.m */; };
+		59274BD622F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BC822F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.m */; };
+		59274BD722F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BCA22F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.m */; };
+		59274BD822F7F7E800C259BE /* BraintreeDemoBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BCB22F7F7E800C259BE /* BraintreeDemoBaseViewController.m */; };
+		59274BD922F7F7E800C259BE /* BraintreeDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BCE22F7F7E800C259BE /* BraintreeDemoAppDelegate.m */; };
+		59274BDA22F7F7E800C259BE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59274BD222F7F7E800C259BE /* Launch Screen.storyboard */; };
 		6BBC1247B708440387C30E76 /* Pods_Test3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4FE6CAAD1DD8FCD6891805 /* Pods_Test3UITests.framework */; };
 		E572D24E8F10108E42D03F67 /* Pods_Test3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +164,22 @@
 		59274BB522F7D94D00C259BE /* BTCardNonce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardNonce.h; sourceTree = "<group>"; };
 		59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTThreeDSecureInfo.m; sourceTree = "<group>"; };
 		59274BB722F7D94D00C259BE /* BTCardClient_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardClient_Internal.h; sourceTree = "<group>"; };
+		59274BBF22F7F48200C259BE /* BraintreeDemoMerchantAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoMerchantAPI.m; sourceTree = "<group>"; };
+		59274BC022F7F48200C259BE /* BraintreeDemoMerchantAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoMerchantAPI.h; sourceTree = "<group>"; };
+		59274BC422F7F7E800C259BE /* BraintreeDemoSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoSettings.m; sourceTree = "<group>"; };
+		59274BC522F7F7E800C259BE /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		59274BC622F7F7E800C259BE /* BraintreeDemoSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoSettings.h; sourceTree = "<group>"; };
+		59274BC722F7F7E800C259BE /* BraintreeDemoIntegrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoIntegrationViewController.m; sourceTree = "<group>"; };
+		59274BC822F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoDemoContainmentViewController.m; sourceTree = "<group>"; };
+		59274BCA22F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoPaymentButtonBaseViewController.m; sourceTree = "<group>"; };
+		59274BCB22F7F7E800C259BE /* BraintreeDemoBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoBaseViewController.m; sourceTree = "<group>"; };
+		59274BCC22F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoPaymentButtonBaseViewController.h; sourceTree = "<group>"; };
+		59274BCD22F7F7E800C259BE /* BraintreeDemoBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoBaseViewController.h; sourceTree = "<group>"; };
+		59274BCE22F7F7E800C259BE /* BraintreeDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BraintreeDemoAppDelegate.m; sourceTree = "<group>"; };
+		59274BCF22F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoDemoContainmentViewController.h; sourceTree = "<group>"; };
+		59274BD022F7F7E800C259BE /* BraintreeDemoIntegrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoIntegrationViewController.h; sourceTree = "<group>"; };
+		59274BD122F7F7E800C259BE /* BraintreeDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BraintreeDemoAppDelegate.h; sourceTree = "<group>"; };
+		59274BD222F7F7E800C259BE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F4FAE4DA75CB385FBBBC34 /* Pods_Test3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8C1EC5DB6463698A562A7E /* Pods-Test3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3.debug.xcconfig"; path = "Target Support Files/Pods-Test3/Pods-Test3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +251,7 @@
 		59274AD822F7C14900C259BE /* Test3 */ = {
 			isa = PBXGroup;
 			children = (
+				59274BBE22F7F48200C259BE /* Merchant API Client */,
 				59274B5A22F7D92A00C259BE /* BraintreeCore */,
 				59274AD922F7C14900C259BE /* AppDelegate.h */,
 				59274ADA22F7C14900C259BE /* AppDelegate.m */,
@@ -359,6 +385,53 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
+		59274BBE22F7F48200C259BE /* Merchant API Client */ = {
+			isa = PBXGroup;
+			children = (
+				59274BC222F7F7E800C259BE /* Demo Base */,
+				59274BBF22F7F48200C259BE /* BraintreeDemoMerchantAPI.m */,
+				59274BC022F7F48200C259BE /* BraintreeDemoMerchantAPI.h */,
+			);
+			path = "Merchant API Client";
+			sourceTree = "<group>";
+		};
+		59274BC222F7F7E800C259BE /* Demo Base */ = {
+			isa = PBXGroup;
+			children = (
+				59274BC322F7F7E800C259BE /* Settings */,
+				59274BC722F7F7E800C259BE /* BraintreeDemoIntegrationViewController.m */,
+				59274BC822F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.m */,
+				59274BC922F7F7E800C259BE /* Base View Controllers */,
+				59274BCE22F7F7E800C259BE /* BraintreeDemoAppDelegate.m */,
+				59274BCF22F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.h */,
+				59274BD022F7F7E800C259BE /* BraintreeDemoIntegrationViewController.h */,
+				59274BD122F7F7E800C259BE /* BraintreeDemoAppDelegate.h */,
+				59274BD222F7F7E800C259BE /* Launch Screen.storyboard */,
+			);
+			path = "Demo Base";
+			sourceTree = "<group>";
+		};
+		59274BC322F7F7E800C259BE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				59274BC422F7F7E800C259BE /* BraintreeDemoSettings.m */,
+				59274BC522F7F7E800C259BE /* Settings.bundle */,
+				59274BC622F7F7E800C259BE /* BraintreeDemoSettings.h */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		59274BC922F7F7E800C259BE /* Base View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				59274BCA22F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.m */,
+				59274BCB22F7F7E800C259BE /* BraintreeDemoBaseViewController.m */,
+				59274BCC22F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.h */,
+				59274BCD22F7F7E800C259BE /* BraintreeDemoBaseViewController.h */,
+			);
+			path = "Base View Controllers";
+			sourceTree = "<group>";
+		};
 		7F7CDCDB228919BB501B8A9E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +456,7 @@
 				59274AD222F7C14900C259BE /* Sources */,
 				59274AD322F7C14900C259BE /* Frameworks */,
 				59274AD422F7C14900C259BE /* Resources */,
+				34EF57BDC5121E8CDD670FBF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -478,8 +552,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59274BDA22F7F7E800C259BE /* Launch Screen.storyboard in Resources */,
 				59274AE922F7C14A00C259BE /* LaunchScreen.storyboard in Resources */,
 				59274AE622F7C14A00C259BE /* Assets.xcassets in Resources */,
+				59274BD422F7F7E800C259BE /* Settings.bundle in Resources */,
 				59274BA422F7D92A00C259BE /* Info-orig.plist in Resources */,
 				59274AE122F7C14900C259BE /* Main.storyboard in Resources */,
 			);
@@ -522,6 +598,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34EF57BDC5121E8CDD670FBF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test3/Pods-Test3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Test3/Pods-Test3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Test3/Pods-Test3-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		684B4E54CF6141E2F5012A85 /* [CP] Check Pods Manifest.lock */ = {
@@ -580,17 +673,22 @@
 				59274BB822F7D94D00C259BE /* BTConfiguration+Card.m in Sources */,
 				59274B9422F7D92A00C259BE /* BTURLUtils.m in Sources */,
 				59274B9622F7D92A00C259BE /* BTAnalyticsService.m in Sources */,
+				59274BC122F7F48200C259BE /* BraintreeDemoMerchantAPI.m in Sources */,
 				59274AE422F7C14900C259BE /* Test3.xcdatamodeld in Sources */,
 				59274B9922F7D92A00C259BE /* BTPaymentMethodNonce.m in Sources */,
 				59274B9122F7D92A00C259BE /* BTClientToken.m in Sources */,
+				59274BD822F7F7E800C259BE /* BraintreeDemoBaseViewController.m in Sources */,
 				59274ADE22F7C14900C259BE /* ViewController.m in Sources */,
 				59274BBA22F7D94D00C259BE /* BTCardRequest.m in Sources */,
 				59274B9F22F7D92A00C259BE /* BTLogger.m in Sources */,
+				59274BD622F7F7E800C259BE /* BraintreeDemoDemoContainmentViewController.m in Sources */,
 				59274B9222F7D92A00C259BE /* BTJSON.m in Sources */,
 				59274B8F22F7D92A00C259BE /* BTErrors.m in Sources */,
 				59274BA222F7D92A00C259BE /* BTGraphQLHTTP.m in Sources */,
 				59274B9722F7D92A00C259BE /* BTPaymentMethodNonceParser.m in Sources */,
 				59274BA122F7D92A00C259BE /* BTAPIPinnedCertificates.m in Sources */,
+				59274BD922F7F7E800C259BE /* BraintreeDemoAppDelegate.m in Sources */,
+				59274BD522F7F7E800C259BE /* BraintreeDemoIntegrationViewController.m in Sources */,
 				59274B9C22F7D92A00C259BE /* BTHTTP.m in Sources */,
 				59274AEC22F7C14A00C259BE /* main.m in Sources */,
 				59274B9522F7D92A00C259BE /* BTAPIClient.m in Sources */,
@@ -599,6 +697,7 @@
 				59274BBC22F7D94D00C259BE /* BTCard.m in Sources */,
 				59274BB922F7D94D00C259BE /* BTCardNonce.m in Sources */,
 				59274B9322F7D92A00C259BE /* BTBinData.m in Sources */,
+				59274BD722F7F7E800C259BE /* BraintreeDemoPaymentButtonBaseViewController.m in Sources */,
 				59274B9B22F7D92A00C259BE /* BTHTTPErrors.m in Sources */,
 				59274BA322F7D92A00C259BE /* BTClientMetadata.m in Sources */,
 				59274B9A22F7D92A00C259BE /* BTTokenizationService.m in Sources */,
@@ -606,6 +705,7 @@
 				59274BBB22F7D94D00C259BE /* BTCardClient.m in Sources */,
 				59274ADB22F7C14900C259BE /* AppDelegate.m in Sources */,
 				59274BA022F7D92A00C259BE /* BTKeychain.m in Sources */,
+				59274BD322F7F7E800C259BE /* BraintreeDemoSettings.m in Sources */,
 				59274B9E22F7D92A00C259BE /* BTPostalAddress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

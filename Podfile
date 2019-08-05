@@ -6,7 +6,12 @@ target 'Test3' do
   use_frameworks!
 
   # Pods for Test3 
+  pod 'AFNetworking'
   pod 'CardIO'
+  pod 'NSURL+QueryDictionary', '~> 1.0'
+  pod 'PureLayout'
+  pod 'InAppSettingsKit'
+
 
   target 'Test3Tests' do
     inherit! :search_paths
