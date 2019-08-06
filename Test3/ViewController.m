@@ -11,6 +11,7 @@
 #import <CardIO/CardIO.h>
 #import "BTCardClient.h"
 
+
 @interface ViewController ()<CardIOPaymentViewControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UITextField *cardNumberField;
@@ -21,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *autofillButton;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (nonatomic, strong) BTAPIClient *apiClient;
-
+//@property (nonatomic, strong) BTApplePayClient *appleClient;
 @property (weak, nonatomic) IBOutlet UILabel *nounceLbl;
 
 @property (weak, nonatomic) IBOutlet UILabel *transactionInfoLbl;
@@ -67,8 +68,26 @@ NSString *tokenize_key;
     NSLog( @"merchant: %@  public key: %@ tokenize key: %@ ", merchant, public_key, tokenize_key );
 }
 
--(void) getConfiuration {
-    
+-(void) getConfiguration {
+    [_apiClient fetchOrReturnRemoteConfiguration:^(BTConfiguration * _Nullable configuration, NSError * _Nullable error) {
+        
+        BTJSON *json = [configuration json];
+        NSDictionary *dict = [json asDictionary];
+        //        NSDictionary *analystics = [dict objectForKey:@"analytics"];
+        //        NSString *url      =  [dict objectForKey:@"url"];
+        NSDictionary *creditCards   =     [dict objectForKey:@"creditCards"];
+        NSString *environment    =    [dict objectForKey:@"environment"];
+        NSDictionary *graphQL      =  [dict objectForKey:@"graphQL"];
+        NSString *merchantId    =    [dict objectForKey:@"merchantId"];
+        NSNumber *paypalEnabled  =      [dict objectForKey:@"paypalEnabled"];
+        //        NSDictionary *threeDSecure    =    [dict objectForKey:@"threeDSecure"];
+        //        NSNumber *threeDSecureEnabled = [dict objectForKey:@"threeDSecureEnabled"];
+        NSString *venmo = [dict objectForKey:@"venmo"];
+        //        NSLog( @"fetchOrReturnRemoteConfiguration cards: %@ merch id:%@ environ: %@ paypal: %@ venmo: %@", creditCards, merchant, environment, paypalEnabled, venmo  );
+        
+        _infoView.text = [NSString stringWithFormat:@"fetchOrReturnRemoteConfiguration cards: %@ merch id:%@ environ: %@ paypal: %@ venmo: %@", creditCards, merchant, environment, paypalEnabled, venmo ];
+    }];
+
 }
 
 - (void)viewDidLoad {
@@ -76,30 +95,30 @@ NSString *tokenize_key;
     [self getCredentials];
     
     _apiClient = [[BTAPIClient alloc] initWithAuthorization:tokenize_key];
-    [_apiClient fetchOrReturnRemoteConfiguration:^(BTConfiguration * _Nullable configuration, NSError * _Nullable error) {
-        
-        BTJSON *json = [configuration json];
-        NSDictionary *dict = [json asDictionary];
-//        NSDictionary *analystics = [dict objectForKey:@"analytics"];
-//        NSString *url      =  [dict objectForKey:@"url"];
-        NSDictionary *creditCards   =     [dict objectForKey:@"creditCards"];
-        NSString *environment    =    [dict objectForKey:@"environment"];
-        NSDictionary *graphQL      =  [dict objectForKey:@"graphQL"];
-        NSString *merchantId    =    [dict objectForKey:@"merchantId"];
-        NSNumber *paypalEnabled  =      [dict objectForKey:@"paypalEnabled"];
-//        NSDictionary *threeDSecure    =    [dict objectForKey:@"threeDSecure"];
-//        NSNumber *threeDSecureEnabled = [dict objectForKey:@"threeDSecureEnabled"];
-        NSString *venmo = [dict objectForKey:@"venmo"];
-//        NSLog( @"fetchOrReturnRemoteConfiguration cards: %@ merch id:%@ environ: %@ paypal: %@ venmo: %@", creditCards, merchant, environment, paypalEnabled, venmo  );
-        
-        _infoView.text = [NSString stringWithFormat:@"fetchOrReturnRemoteConfiguration cards: %@ merch id:%@ environ: %@ paypal: %@ venmo: %@", creditCards, merchant, environment, paypalEnabled, venmo ];
-    }];
+    [self getConfiguration];
+    [self getNounces];
     
     self.title = NSLocalizedString(@"Card Tokenization", nil);
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 
     [CardIOUtilities preload];
 }
+
+// THis does not work... Needs client key sent to the server.
+-(void) getNounces {
+    [ _apiClient fetchPaymentMethodNonces:YES completion:^(NSArray<BTPaymentMethodNonce *> * _Nullable paymentMethodNonces, NSError * _Nullable error) {
+        
+        if( error ) {
+            NSLog( @"error: %@", error );
+        }
+        else {
+            NSLog( @"-- -- " );
+        }
+    }];
+}
+
+
+
 
 - (void)userDidProvideCreditCardInfo:(CardIOCreditCardInfo *)cardInfo inPaymentViewController:(CardIOPaymentViewController *)paymentViewController {
     self.progressBlock([NSString stringWithFormat:@"Scanned a card with Card.IO: %@", [cardInfo redactedCardNumber]]);
@@ -167,6 +186,12 @@ NSString *tokenize_key;
     [self presentViewController:scanViewController animated:YES completion:nil];
     
 }
+
+- (IBAction)applePay:(id)sender {
+    
+    
+}
+
 
 
 - (void)setFieldsEnabled:(BOOL)enabled {
