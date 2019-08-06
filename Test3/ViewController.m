@@ -22,9 +22,21 @@
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (nonatomic, strong) BTAPIClient *apiClient;
 
+@property (weak, nonatomic) IBOutlet UILabel *nounceLbl;
+
+@property (weak, nonatomic) IBOutlet UILabel *transactionInfoLbl;
+
+
 @end
 
 @implementation ViewController
+
+NSString *serverURL = @"";
+NSString *addPaymentEndPoint = @"/payment/addpayment";
+NSString *getPaymentsEndpoint = @"/payment/payments";
+NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
+
+
 
 
 - (instancetype)initWithAuthorization:(NSString *)authorization {
@@ -39,11 +51,19 @@
     return [self initWithAuthorization:@"development_tokenization_key"];
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"development_tokenization_key"];
-//    _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"sandbox_tokenization_key"];
+    NSString *plistFile = [[NSBundle mainBundle] pathForResource: @"public-keys" ofType: @"plist"];
+
+    NSDictionary *theDict = [NSDictionary dictionaryWithContentsOfFile:plistFile];
+    NSString *merchant = [theDict objectForKey:@"merchant_id"];
+    NSString *public_key = [theDict objectForKey:@"public_key"];
+    
+    NSLog( @"merchant: %@  key: %@", merchant, public_key );
+    
     _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"sandbox_9dbg82cq_dcpspy2brwdjr3qn"];
     self.title = NSLocalizedString(@"Card Tokenization", nil);
     self.edgesForExtendedLayout = UIRectEdgeBottom;
@@ -72,24 +92,25 @@
 }
 
 - (IBAction)submitForm {
-//    self.progressBlock(@"Tokenizing card details!");
-
     BTCardClient *cardClient = [[BTCardClient alloc] initWithAPIClient:self.apiClient];
     BTCard *card = [[BTCard alloc] initWithNumber:self.cardNumberField.text
                                   expirationMonth:self.expirationMonthField.text
                                    expirationYear:self.expirationYearField.text
                                               cvv:nil];
 
-//    [self setFieldsEnabled:NO];
+
     [cardClient tokenizeCard:card completion:^(BTCardNonce *tokenized, NSError *error) {
         [self setFieldsEnabled:YES];
         if (error) {
-//            self.progressBlock(error.localizedDescription);
             NSLog(@"Error: %@", error);
-            NSLog( @"Nonce: %@", tokenized.nonce );
             return;
         }
-        self.completionBlock(tokenized);
+        else {
+            NSLog( @"Nonce: %@", tokenized.nonce );
+            self->_transactionInfoLbl.text = tokenized.nonce;
+
+        }
+
     }];
 }
 
@@ -108,6 +129,22 @@
     [self presentViewController:cardIO animated:YES completion:nil];
 }
 
+- (IBAction)trasnactionInfoTouched:(id)sender {
+    
+}
+
+- (IBAction)scanCard:(id)sender {
+    
+    CardIOPaymentViewController *scanViewController = [[CardIOPaymentViewController alloc] initWithPaymentDelegate:self];
+    [self presentViewController:scanViewController animated:YES completion:nil];
+    
+}
+
+
+
+
+
+
 - (void)setFieldsEnabled:(BOOL)enabled {
     self.cardNumberField.enabled = enabled;
     self.expirationMonthField.enabled = enabled;
@@ -115,6 +152,67 @@
     self.submitButton.enabled = enabled;
     self.cardIOButton.enabled = enabled;
     self.autofillButton.enabled = enabled;
+}
+
+
+-(NSString *) createNounce {
+    NSString * nounce = @"";
+    
+    return nounce;
+}
+
+-(void) getTransactionInfo {
+    
+}
+
+
+-(void) createToken {
+    
+}
+
+
+-(void) capturePayment {
+    
+}
+
+-(void) getRecentClientTransaction {
+    
+}
+
+-(void) StoreToken {
+    
+}
+
+-(void) getTokenForMotorist {
+    
+}
+
+- (void)fetchClientToken {
+    // TODO: Switch this URL to your own authenticated API
+    NSURL *clientTokenURL = [NSURL URLWithString:@"https://braintree-sample-merchant.herokuapp.com/client_token"];
+    NSMutableURLRequest *clientTokenRequest = [NSMutableURLRequest requestWithURL:clientTokenURL];
+    [clientTokenRequest setValue:@"text/plain" forHTTPHeaderField:@"Accept"];
+    
+    [[[NSURLSession sharedSession] dataTaskWithRequest:clientTokenRequest completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        // TODO: Handle errors
+        NSString *clientToken = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+    }] resume];
+}
+
+-(void) paymentFlow {
+    [self createNounce];
+    [self createToken];
+    [self StoreToken];
+}
+
+-(void) parkingTransaction {
+    [self getTokenForMotorist];
+    [self capturePayment];
+}
+
+-(void) enquiry {
+    [self getRecentClientTransaction];
 }
 
 @end

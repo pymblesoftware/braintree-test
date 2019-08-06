@@ -46,6 +46,8 @@
 		59274BBB22F7D94D00C259BE /* BTCardClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAD22F7D94D00C259BE /* BTCardClient.m */; };
 		59274BBC22F7D94D00C259BE /* BTCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BAE22F7D94D00C259BE /* BTCard.m */; };
 		59274BBD22F7D94D00C259BE /* BTThreeDSecureInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */; };
+		59274BF522F909D900C259BE /* public-keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 59274BF422F909D900C259BE /* public-keys.plist */; };
+		59274BF722F90AA400C259BE /* braintree-keys.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 59274BF622F90AA400C259BE /* braintree-keys.rtf */; };
 		6BBC1247B708440387C30E76 /* Pods_Test3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC4FE6CAAD1DD8FCD6891805 /* Pods_Test3UITests.framework */; };
 		E572D24E8F10108E42D03F67 /* Pods_Test3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +157,8 @@
 		59274BB522F7D94D00C259BE /* BTCardNonce.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardNonce.h; sourceTree = "<group>"; };
 		59274BB622F7D94D00C259BE /* BTThreeDSecureInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTThreeDSecureInfo.m; sourceTree = "<group>"; };
 		59274BB722F7D94D00C259BE /* BTCardClient_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTCardClient_Internal.h; sourceTree = "<group>"; };
+		59274BF422F909D900C259BE /* public-keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "public-keys.plist"; path = "../../../../../../../../work/ios/Test3/Test3/public-keys.plist"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59274BF622F90AA400C259BE /* braintree-keys.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "braintree-keys.rtf"; sourceTree = "<group>"; };
 		59D6FB162BFAAB6768A8E2DD /* Pods_Test3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90F4FAE4DA75CB385FBBBC34 /* Pods_Test3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8C1EC5DB6463698A562A7E /* Pods-Test3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test3.debug.xcconfig"; path = "Target Support Files/Pods-Test3/Pods-Test3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				59274AEA22F7C14A00C259BE /* Info.plist */,
 				59274AEB22F7C14A00C259BE /* main.m */,
 				59274AE222F7C14900C259BE /* Test3.xcdatamodeld */,
+				59274BF422F909D900C259BE /* public-keys.plist */,
+				59274BF622F90AA400C259BE /* braintree-keys.rtf */,
 			);
 			path = Test3;
 			sourceTree = "<group>";
@@ -479,8 +485,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				59274AE922F7C14A00C259BE /* LaunchScreen.storyboard in Resources */,
+				59274BF722F90AA400C259BE /* braintree-keys.rtf in Resources */,
 				59274AE622F7C14A00C259BE /* Assets.xcassets in Resources */,
 				59274BA422F7D92A00C259BE /* Info-orig.plist in Resources */,
+				59274BF522F909D900C259BE /* public-keys.plist in Resources */,
 				59274AE122F7C14900C259BE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
