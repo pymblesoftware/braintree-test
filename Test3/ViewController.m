@@ -25,6 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nounceLbl;
 
 @property (weak, nonatomic) IBOutlet UILabel *transactionInfoLbl;
+@property (weak, nonatomic) IBOutlet UILabel *infoView;
 
 
 @end
@@ -66,11 +67,34 @@ NSString *tokenize_key;
     NSLog( @"merchant: %@  public key: %@ tokenize key: %@ ", merchant, public_key, tokenize_key );
 }
 
+-(void) getConfiuration {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self getCredentials];
     
     _apiClient = [[BTAPIClient alloc] initWithAuthorization:tokenize_key];
+    [_apiClient fetchOrReturnRemoteConfiguration:^(BTConfiguration * _Nullable configuration, NSError * _Nullable error) {
+        
+        BTJSON *json = [configuration json];
+        NSDictionary *dict = [json asDictionary];
+//        NSDictionary *analystics = [dict objectForKey:@"analytics"];
+//        NSString *url      =  [dict objectForKey:@"url"];
+        NSDictionary *creditCards   =     [dict objectForKey:@"creditCards"];
+        NSString *environment    =    [dict objectForKey:@"environment"];
+        NSDictionary *graphQL      =  [dict objectForKey:@"graphQL"];
+        NSString *merchantId    =    [dict objectForKey:@"merchantId"];
+        NSNumber *paypalEnabled  =      [dict objectForKey:@"paypalEnabled"];
+//        NSDictionary *threeDSecure    =    [dict objectForKey:@"threeDSecure"];
+//        NSNumber *threeDSecureEnabled = [dict objectForKey:@"threeDSecureEnabled"];
+        NSString *venmo = [dict objectForKey:@"venmo"];
+//        NSLog( @"fetchOrReturnRemoteConfiguration cards: %@ merch id:%@ environ: %@ paypal: %@ venmo: %@", creditCards, merchant, environment, paypalEnabled, venmo  );
+        
+        _infoView.text = [NSString stringWithFormat:@"fetchOrReturnRemoteConfiguration cards: %@ merch id:%@ environ: %@ paypal: %@ venmo: %@", creditCards, merchant, environment, paypalEnabled, venmo ];
+    }];
+    
     self.title = NSLocalizedString(@"Card Tokenization", nil);
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 

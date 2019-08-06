@@ -104,6 +104,13 @@
                                     <action selector="scanCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oHv-T7-CBl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="bS0-f3-kWR">
+                                <rect key="frame" x="20" y="561" width="374" height="197"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TransactionInfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8a-kA-Dy6">
                                 <rect key="frame" x="20" y="438" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -152,6 +159,7 @@
                         <outlet property="cardNumberField" destination="MEu-IS-Rgg" id="h1j-dR-SSi"/>
                         <outlet property="expirationMonthField" destination="BlB-Lh-1Oa" id="GFV-gL-7H2"/>
                         <outlet property="expirationYearField" destination="sQI-ei-c4R" id="5t6-SM-tyl"/>
+                        <outlet property="infoView" destination="bS0-f3-kWR" id="Hf1-2q-ugf"/>
                         <outlet property="nounceLbl" destination="y8a-kA-Dy6" id="qVN-mG-6m9"/>
                         <outlet property="submitButton" destination="w8p-Fq-r0A" id="k4T-Qc-ZgT"/>
                         <outlet property="transactionInfoLbl" destination="B7I-Bc-wef" id="EgV-w5-wMi"/>
