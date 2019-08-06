@@ -37,6 +37,12 @@ NSString *getPaymentsEndpoint = @"/payment/payments";
 NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
 
 
+NSString *merchant;
+NSString *public_key;
+NSString *sampleToken = @"sandbox_9dbg82cq_dcpspy2brwdjr3qn";
+NSString *tokenize_key;
+
+
 
 
 - (instancetype)initWithAuthorization:(NSString *)authorization {
@@ -51,20 +57,20 @@ NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
     return [self initWithAuthorization:@"development_tokenization_key"];
 }
 
-
+-(void) getCredentials {
+    NSString *plistFile = [[NSBundle mainBundle] pathForResource: @"public-keys" ofType: @"plist"];
+    NSDictionary *theDict = [NSDictionary dictionaryWithContentsOfFile:plistFile];
+    merchant = [theDict objectForKey:@"merchant_id"];
+    public_key = [theDict objectForKey:@"public_key"];
+    tokenize_key = [theDict objectForKey:@"tokenize_key"];
+    NSLog( @"merchant: %@  public key: %@ tokenize key: %@ ", merchant, public_key, tokenize_key );
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getCredentials];
     
-    NSString *plistFile = [[NSBundle mainBundle] pathForResource: @"public-keys" ofType: @"plist"];
-
-    NSDictionary *theDict = [NSDictionary dictionaryWithContentsOfFile:plistFile];
-    NSString *merchant = [theDict objectForKey:@"merchant_id"];
-    NSString *public_key = [theDict objectForKey:@"public_key"];
-    
-    NSLog( @"merchant: %@  key: %@", merchant, public_key );
-    
-    _apiClient = [[BTAPIClient alloc] initWithAuthorization:@"sandbox_9dbg82cq_dcpspy2brwdjr3qn"];
+    _apiClient = [[BTAPIClient alloc] initWithAuthorization:tokenize_key];
     self.title = NSLocalizedString(@"Card Tokenization", nil);
     self.edgesForExtendedLayout = UIRectEdgeBottom;
 
@@ -98,7 +104,6 @@ NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
                                    expirationYear:self.expirationYearField.text
                                               cvv:nil];
 
-
     [cardClient tokenizeCard:card completion:^(BTCardNonce *tokenized, NSError *error) {
         [self setFieldsEnabled:YES];
         if (error) {
@@ -108,7 +113,6 @@ NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
         else {
             NSLog( @"Nonce: %@", tokenized.nonce );
             self->_transactionInfoLbl.text = tokenized.nonce;
-
         }
 
     }];
@@ -141,10 +145,6 @@ NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
 }
 
 
-
-
-
-
 - (void)setFieldsEnabled:(BOOL)enabled {
     self.cardNumberField.enabled = enabled;
     self.expirationMonthField.enabled = enabled;
@@ -155,7 +155,7 @@ NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
 }
 
 
--(NSString *) createNounce {
+-(NSString *) createNounce:(NSString *)cardNumber month:(NSString *) mon year:(NSString *) yy {
     NSString * nounce = @"";
     
     return nounce;
@@ -201,7 +201,11 @@ NSString *updtePaymentDefault = @"/payment/markcardasdefault?paymentId=7";
 }
 
 -(void) paymentFlow {
-    [self createNounce];
+    
+    NSString *cardnumber = @"";
+    NSString *month = @"";
+    NSString *yy = @"";
+    [self createNounce:cardnumber month:month year:yy];
     [self createToken];
     [self StoreToken];
 }
